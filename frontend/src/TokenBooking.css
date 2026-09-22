@@ -1,0 +1,941 @@
+/* =========================================================
+   TOKEN BOOKING PAGE
+========================================================= */
+
+.token-booking-page {
+  min-height: 100vh;
+  background: #f5f7f6;
+  color: #102b1d;
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.token-booking-header {
+  min-height: 76px;
+  padding: 0 7%;
+  background: #ffffff;
+  border-bottom: 1px solid #e4e9e6;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.token-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.token-brand-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #166534;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.token-header-brand h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 850;
+  color: #163d29;
+}
+
+.token-header-brand p {
+  margin: 3px 0 0;
+  font-size: 11px;
+  color: #718078;
+}
+
+.token-back-button {
+  border: 1px solid #dce5df;
+  background: #ffffff;
+  color: #166534;
+
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.token-back-button:hover {
+  background: #f2f8f4;
+  border-color: #bcd4c4;
+}
+
+.token-header-id {
+  padding: 9px 13px;
+  border: 1px solid #dce8df;
+  border-radius: 20px;
+
+  background: #f6faf7;
+  color: #166534;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.token-booking-main {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+  padding: 55px 0 70px;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.token-page-intro {
+  margin-bottom: 34px;
+}
+
+.token-page-intro > span {
+  display: inline-block;
+  margin-bottom: 9px;
+
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 1.2px;
+  color: #16834a;
+}
+
+.token-page-intro h2 {
+  margin: 0;
+
+  font-size: 38px;
+  line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: -1px;
+
+  color: #102b1d;
+}
+
+.token-page-intro p {
+  margin: 11px 0 0;
+
+  font-size: 15px;
+  line-height: 1.6;
+  color: #66756d;
+}
+
+
+/* =========================================================
+   BOOKING GRID
+========================================================= */
+
+.token-booking-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT INFORMATION PANEL
+========================================================= */
+
+.token-info-panel {
+  position: relative;
+  overflow: hidden;
+
+  padding: 38px;
+
+  border-radius: 18px;
+  background: #103f27;
+  color: #ffffff;
+
+  box-shadow:
+    0 16px 35px rgba(16, 63, 39, 0.12);
+}
+
+.token-info-panel::before {
+  content: "";
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+
+  right: -100px;
+  top: 40px;
+}
+
+.token-info-panel::after {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+
+  right: -45px;
+  top: 95px;
+}
+
+.token-info-top {
+  position: relative;
+  z-index: 2;
+}
+
+.token-info-top > span {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.3px;
+  color: #9ee8b8;
+}
+
+.token-info-top h3 {
+  margin: 13px 0 10px;
+
+  font-size: 29px;
+  line-height: 1.2;
+  font-weight: 850;
+
+  color: #ffffff;
+}
+
+.token-info-top p {
+  max-width: 410px;
+
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: #c9ddd0;
+}
+
+
+/* =========================================================
+   INFORMATION STEPS
+========================================================= */
+
+.token-info-steps {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 38px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.token-info-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.token-info-step > div {
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 850;
+  color: #b7edc8;
+}
+
+.token-info-step section {
+  padding-top: 2px;
+}
+
+.token-info-step strong {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.token-info-step p {
+  margin: 5px 0 0;
+
+  font-size: 12px;
+  line-height: 1.5;
+  color: #bcd2c4;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.token-form-card {
+  padding: 36px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e8e3;
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 30px rgba(16, 43, 29, 0.05);
+}
+
+.token-form-heading {
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+
+  border-bottom: 1px solid #edf1ee;
+}
+
+.token-form-heading > span {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.2px;
+  color: #16834a;
+}
+
+.token-form-heading h3 {
+  margin: 8px 0 6px;
+
+  font-size: 24px;
+  font-weight: 850;
+
+  color: #102b1d;
+}
+
+.token-form-heading p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+  color: #718078;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.token-form-group {
+  margin-bottom: 22px;
+}
+
+.token-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  font-weight: 800;
+  color: #34483c;
+}
+
+.token-form-group select {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d9e3dc;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #193326;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.token-form-group select:focus {
+  border-color: #5e9c72;
+  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.08);
+}
+
+
+/* =========================================================
+   READONLY CENTRE
+========================================================= */
+
+.token-readonly-field {
+  min-height: 64px;
+
+  padding: 10px 13px;
+
+  border: 1px solid #dfe8e2;
+  border-radius: 10px;
+
+  background: #f7faf8;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.token-field-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #cfe3d5;
+  border-radius: 9px;
+
+  background: #edf8f0;
+  color: #167443;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.token-readonly-field strong {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 800;
+  color: #18382a;
+}
+
+.token-readonly-field span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+  color: #748279;
+}
+
+
+/* =========================================================
+   SCHEDULE
+========================================================= */
+
+.token-schedule-box {
+  min-height: 76px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #dfe8e2;
+  border-radius: 10px;
+
+  background: #f8fbf9;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.schedule-date {
+  width: 48px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+  background: #eaf6ee;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-date strong {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 900;
+  color: #166534;
+}
+
+.schedule-date span {
+  margin-top: 3px;
+
+  font-size: 9px;
+  font-weight: 850;
+  color: #4d795c;
+}
+
+.schedule-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.schedule-info strong {
+  display: block;
+
+  font-size: 12px;
+  font-weight: 800;
+  color: #1b392a;
+}
+
+.schedule-info span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+  color: #69786f;
+}
+
+.schedule-info small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 10px;
+  color: #8a958e;
+}
+
+.schedule-status {
+  padding: 6px 8px;
+
+  border: 1px solid #cce4d3;
+  border-radius: 6px;
+
+  background: #eef8f1;
+  color: #167443;
+
+  font-size: 9px;
+  font-weight: 850;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.token-error {
+  margin: 0 0 17px;
+
+  padding: 11px 13px;
+
+  border: 1px solid #f0cccc;
+  border-radius: 8px;
+
+  background: #fff6f6;
+  color: #a33a3a;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.token-error span {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #f5dada;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   GENERATE BUTTON
+========================================================= */
+
+.generate-token-button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #166534;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(22, 101, 52, 0.15);
+
+  transition: 0.2s ease;
+}
+
+.generate-token-button:hover {
+  background: #14532d;
+  transform: translateY(-1px);
+}
+
+.generate-token-button:active {
+  transform: translateY(0);
+}
+
+.generate-token-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.token-form-footer {
+  margin: 12px 0 0;
+
+  text-align: center;
+
+  font-size: 10px;
+  line-height: 1.5;
+  color: #87928c;
+}
+
+
+/* =========================================================
+   SUCCESS PAGE
+========================================================= */
+
+.token-success-card {
+  width: min(600px, 90%);
+
+  margin: 70px auto;
+
+  padding: 45px;
+
+  border: 1px solid #dfe8e2;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-shadow:
+    0 18px 45px rgba(16, 43, 29, 0.08);
+}
+
+.token-success-icon {
+  width: 66px;
+  height: 66px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #eaf7ee;
+  border: 1px solid #cbe5d3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #16834a;
+
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.token-success-label {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.3px;
+  color: #16834a;
+}
+
+.token-success-card h1 {
+  margin: 10px 0 8px;
+
+  font-size: 30px;
+  font-weight: 900;
+  color: #102b1d;
+}
+
+.token-success-description {
+  margin: 0 auto;
+
+  max-width: 430px;
+
+  font-size: 13px;
+  line-height: 1.6;
+  color: #718078;
+}
+
+
+/* =========================================================
+   GENERATED TOKEN
+========================================================= */
+
+.generated-token-box {
+  margin: 28px 0 18px;
+
+  padding: 25px;
+
+  border: 1px solid #cfe4d5;
+  border-radius: 14px;
+
+  background: #f3faf5;
+}
+
+.generated-token-box span {
+  display: block;
+
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1px;
+  color: #5f7969;
+}
+
+.generated-token-box strong {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 52px;
+  line-height: 1;
+
+  font-weight: 950;
+  letter-spacing: 1px;
+
+  color: #12572f;
+}
+
+
+/* =========================================================
+   SUCCESS DETAILS
+========================================================= */
+
+.generated-token-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border: 1px solid #e3eae5;
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.generated-token-details > div {
+  padding: 16px;
+
+  background: #ffffff;
+}
+
+.generated-token-details > div + div {
+  border-left: 1px solid #e3eae5;
+}
+
+.generated-token-details span {
+  display: block;
+
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.8px;
+  color: #839087;
+}
+
+.generated-token-details strong {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 15px;
+  font-weight: 850;
+  color: #18382a;
+}
+
+
+/* =========================================================
+   SUCCESS NOTE
+========================================================= */
+
+.token-success-note {
+  margin: 20px 0;
+
+  padding: 13px 15px;
+
+  border-radius: 9px;
+
+  background: #f7faf8;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  text-align: left;
+}
+
+.token-success-note > span {
+  margin-top: 4px;
+
+  color: #1fa55b;
+  font-size: 10px;
+}
+
+.token-success-note p {
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.6;
+  color: #68776e;
+}
+
+.token-success-note strong {
+  color: #315540;
+}
+
+
+/* =========================================================
+   GO DASHBOARD
+========================================================= */
+
+.go-dashboard-button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #166534;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.go-dashboard-button:hover {
+  background: #14532d;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .token-booking-header {
+    padding: 0 5%;
+  }
+
+  .token-booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .token-info-panel {
+    min-height: auto;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .token-booking-header {
+    min-height: auto;
+
+    padding: 15px 5%;
+
+    flex-wrap: wrap;
+  }
+
+  .token-header-brand {
+    order: 1;
+  }
+
+  .token-back-button {
+    order: 2;
+  }
+
+  .token-header-id {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .token-booking-main {
+    width: 92%;
+    padding-top: 35px;
+  }
+
+  .token-page-intro h2 {
+    font-size: 30px;
+  }
+
+  .token-info-panel,
+  .token-form-card {
+    padding: 25px;
+  }
+
+  .token-info-top h3 {
+    font-size: 25px;
+  }
+
+  .token-schedule-box {
+    align-items: flex-start;
+  }
+
+  .schedule-status {
+    display: none;
+  }
+
+  .token-success-card {
+    padding: 30px 22px;
+    margin: 35px auto;
+  }
+
+  .token-success-card h1 {
+    font-size: 25px;
+  }
+
+  .generated-token-box strong {
+    font-size: 42px;
+  }
+}

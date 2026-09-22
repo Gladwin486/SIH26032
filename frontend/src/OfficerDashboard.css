@@ -1,0 +1,861 @@
+/* =========================================================
+   SMART FARMER PROCUREMENT
+   OFFICER DASHBOARD — PREMIUM UI
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.officer-page {
+  min-height: 100vh;
+  background: #f6f8f7;
+  color: #17251b;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.officer-header {
+  height: 78px;
+  padding: 0 5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e7ece9;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Brand */
+
+.officer-brand h1 {
+  margin: 0;
+
+  color: #14532d !important;
+
+  font-size: 23px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.officer-brand p {
+  margin: 3px 0 0;
+
+  color: #718078 !important;
+
+  font-size: 12px;
+}
+
+
+/* Officer */
+
+.officer-info {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 6px 13px 6px 6px;
+
+  background: #fafcfb;
+
+  border: 1px solid #e2e9e4;
+
+  border-radius: 40px;
+}
+
+.officer-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #14532d;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.officer-info strong {
+  display: block;
+
+  color: #17251b !important;
+
+  font-size: 13px;
+}
+
+.officer-info p {
+  margin: 2px 0 0;
+
+  color: #718078 !important;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.officer-main {
+  width: min(1280px, 92%);
+
+  margin: auto;
+
+  padding: 28px 0 0;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-bottom: 20px;
+
+  padding: 8px 13px;
+
+  border: 1px solid #dce6df;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #166534;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: #166534;
+  color: white;
+
+  border-color: #166534;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.officer-title {
+  margin-bottom: 25px;
+}
+
+.officer-title h2 {
+  margin: 0;
+
+  color: #14231a !important;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+}
+
+.officer-title p {
+  margin: 6px 0 0;
+
+  color: #718078 !important;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.officer-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  min-height: 125px;
+
+  position: relative;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e9e4;
+
+  border-radius: 14px;
+
+  box-shadow: 0 3px 14px rgba(18, 38, 25, 0.035);
+
+  overflow: hidden;
+
+  transition: 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #cbdccf;
+
+  box-shadow: 0 8px 22px rgba(18, 38, 25, 0.08);
+}
+
+
+/* Green line */
+
+.stat-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: #22a05a;
+}
+
+.stat-card span {
+  display: block;
+
+  color: #718078;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.stat-card h3 {
+  margin: 12px 0 0;
+
+  color: #14231a;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.stat-card p {
+  margin: 8px 0 0;
+
+  color: #829088;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   PROCUREMENT PROGRESS
+   ========================================================= */
+
+.progress-panel {
+  padding: 23px 25px;
+
+  margin-bottom: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e9e4;
+
+  border-radius: 15px;
+
+  box-shadow: 0 3px 14px rgba(18, 38, 25, 0.035);
+}
+
+.progress-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.progress-header h2 {
+  margin: 0;
+
+  color: #17251b !important;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.progress-header p {
+  margin: 5px 0 0;
+
+  color: #718078 !important;
+
+  font-size: 12px;
+}
+
+.progress-header > strong {
+  color: #15803d !important;
+
+  font-size: 28px;
+}
+
+
+/* Progress */
+
+.progress-bar {
+  height: 11px;
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  background: #edf2ee;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background: #1f8a4c;
+
+  border-radius: 20px;
+
+  transition: width 0.7s ease;
+}
+
+.progress-details {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 9px;
+
+  color: #718078;
+
+  font-size: 11px;
+}
+
+.progress-details strong {
+  color: #27372d;
+}
+
+
+/* =========================================================
+   CENTRE OPERATIONS
+   ========================================================= */
+
+.operations-panel {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.operation-card {
+  min-height: 92px;
+
+  padding: 17px 19px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e9e4;
+
+  border-radius: 13px;
+
+  box-shadow: 0 3px 12px rgba(18, 38, 25, 0.03);
+
+  transition: 0.2s ease;
+}
+
+.operation-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbdccf;
+}
+
+.operation-card span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #718078;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+}
+
+.operation-card strong {
+  color: #17251b;
+
+  font-size: 21px;
+
+  font-weight: 800;
+}
+
+.status-open {
+  color: #15803d !important;
+}
+
+.status-closed {
+  color: #dc2626 !important;
+}
+
+
+/* =========================================================
+   QUEUE PANEL
+   ========================================================= */
+
+.queue-panel {
+  background: #ffffff;
+
+  border: 1px solid #e1e8e3;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow: 0 3px 16px rgba(18, 38, 25, 0.04);
+}
+
+
+/* Queue Header */
+
+.queue-header {
+  min-height: 67px;
+
+  padding: 0 23px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e8eeea;
+}
+
+.queue-header h2 {
+  margin: 0;
+
+  color: #17251b !important;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.live-indicator {
+  padding: 6px 10px;
+
+  background: #effaf2;
+
+  color: #16803d;
+
+  border: 1px solid #ccebd5;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.queue-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.queue-table th {
+  padding: 12px 18px;
+
+  text-align: left;
+
+  background: #f8faf9;
+
+  color: #718078 !important;
+
+  border-bottom: 1px solid #e7ece9;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.queue-table td {
+  padding: 15px 18px;
+
+  color: #25342b !important;
+
+  border-bottom: 1px solid #eef2ef;
+
+  font-size: 12px;
+}
+
+.queue-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.queue-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.queue-table tbody tr:hover td {
+  background: #f8fbf9;
+}
+
+
+/* Token */
+
+.token-number {
+  color: #166534 !important;
+
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  border: 1px solid transparent;
+}
+
+.status-waiting {
+  background: #edf9f1;
+
+  color: #15803d;
+
+  border-color: #c9ead3;
+}
+
+.status-processing {
+  background: #fff8e7;
+
+  color: #a16207;
+
+  border-color: #f4df9d;
+}
+
+.status-completed {
+  background: #f2f4f5;
+
+  color: #64707a;
+
+  border-color: #e1e5e8;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+   ========================================================= */
+
+.action-button {
+  padding: 8px 12px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #176b3a;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.action-button:hover {
+  background: #12552e;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(23, 107, 58, 0.2);
+}
+
+.action-button:active {
+  transform: translateY(0);
+}
+
+.completed-text {
+  color: #15803d;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   EMPTY QUEUE
+   ========================================================= */
+
+.empty-queue {
+  padding: 60px 25px;
+
+  text-align: center;
+
+  color: #718078;
+}
+
+.empty-queue h2,
+.empty-queue h3 {
+  margin: 0 0 8px;
+
+  color: #34443a;
+}
+
+.empty-queue p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   NOTIFICATIONS
+   ========================================================= */
+
+.clear-notifications {
+  border: 1px solid #ccebd5;
+
+  background: #effaf2;
+
+  color: #15803d;
+
+  padding: 7px 11px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.clear-notifications:hover {
+  background: #15803d;
+
+  color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .officer-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .operations-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 750px) {
+
+  .officer-header {
+    height: auto;
+
+    min-height: 70px;
+
+    padding: 13px 4%;
+  }
+
+  .officer-brand h1 {
+    font-size: 18px;
+  }
+
+  .officer-brand p {
+    font-size: 10px;
+  }
+
+  .officer-info {
+    padding: 4px;
+  }
+
+  .officer-info > div:not(.officer-avatar) {
+    display: none;
+  }
+
+  .officer-avatar {
+    width: 37px;
+    height: 37px;
+  }
+
+  .officer-main {
+    width: 94%;
+
+    padding-top: 22px;
+  }
+
+  .officer-title h2 {
+    font-size: 27px;
+  }
+
+  .officer-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .operations-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .queue-panel {
+    overflow-x: auto;
+  }
+
+  .queue-table {
+    min-width: 720px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .officer-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .operations-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-header {
+    align-items: flex-start;
+  }
+
+  .progress-header > strong {
+    font-size: 22px;
+  }
+
+  .queue-header {
+    padding: 0 16px;
+  }
+
+  .queue-header h2 {
+    font-size: 16px;
+  }
+
+  .live-indicator {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   ENTRY ANIMATION
+   ========================================================= */
+
+.officer-title,
+.officer-stats,
+.progress-panel,
+.operations-panel,
+.queue-panel {
+  animation: dashboardEnter 0.4s ease both;
+}
+
+@keyframes dashboardEnter {
+
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
