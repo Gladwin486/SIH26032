@@ -37,7 +37,7 @@ function FarmerDashboard({
 
     try {
       const dashboardResponse = await fetch(
-        `http://127.0.0.1:8000/farmer/dashboard/${farmerId}${
+        `https://sih26032-backend-o8kd.onrender.com/farmer/dashboard/${farmerId}${
           tokenId
             ? `?token_id=${tokenId}&_=${Date.now()}`
             : `?_=${Date.now()}`
@@ -63,7 +63,7 @@ function FarmerDashboard({
       // --------------------------------------------------
       if (dashboardData.token_id) {
         const waitResponse = await fetch(
-          `http://127.0.0.1:8000/queue/${dashboardData.token_id}/wait-time?_=${Date.now()}`,
+          `https://sih26032-backend-o8kd.onrender.com/queue/${dashboardData.token_id}/wait-time?_=${Date.now()}`,
           {
             cache: "no-store",
           }
@@ -83,7 +83,7 @@ function FarmerDashboard({
         // --------------------------------------------------
         const procurementResponse =
           await fetch(
-            `http://127.0.0.1:8000/procurement-status/${dashboardData.token_id}?_=${Date.now()}`,
+            `https://sih26032-backend-o8kd.onrender.com/procurement-status/${dashboardData.token_id}?_=${Date.now()}`,
             {
               cache: "no-store",
             }
@@ -138,7 +138,7 @@ function FarmerDashboard({
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/notifications/${farmerId}?_=${Date.now()}`,
+        `https://sih26032-backend-o8kd.onrender.com/notifications/${farmerId}?_=${Date.now()}`,
         {
           cache: "no-store",
         }
@@ -187,7 +187,7 @@ function FarmerDashboard({
       setProcurementLoading(true);
 
       const response = await fetch(
-        `http://127.0.0.1:8000/procurement-status/${dashboard.token_id}?_=${Date.now()}`,
+        `https://sih26032-backend-o8kd.onrender.com/procurement-status/${dashboard.token_id}?_=${Date.now()}`,
         {
           cache: "no-store",
         }
@@ -273,7 +273,7 @@ function FarmerDashboard({
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/notifications/${farmerId}/read`,
+        `https://sih26032-backend-o8kd.onrender.com/notifications/${farmerId}/read`,
         {
           method: "PUT",
         }

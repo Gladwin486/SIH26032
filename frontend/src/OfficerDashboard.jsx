@@ -12,11 +12,11 @@ function OfficerDashboard() {
   const loadQueue = () => {
     Promise.all([
       fetch(
-        `http://127.0.0.1:8000/officer/queue/${centreId}`
+        `https://sih26032-backend-o8kd.onrender.com/officer/queue/${centreId}`
       ).then((response) => response.json()),
 
       fetch(
-        `http://127.0.0.1:8000/officer/dashboard/${centreId}`
+        `https://sih26032-backend-o8kd.onrender.com/officer/dashboard/${centreId}`
       ).then((response) => response.json()),
     ])
       .then(([queueData, statsData]) => {
@@ -52,7 +52,7 @@ function OfficerDashboard() {
       setUpdating(tokenId);
 
       const response = await fetch(
-        `http://127.0.0.1:8000/tokens/${tokenId}/status?status=Processing`,
+        `https://sih26032-backend-o8kd.onrender.com/tokens/${tokenId}/status?status=Processing`,
         {
           method: "PUT",
         }
@@ -91,7 +91,7 @@ function OfficerDashboard() {
       setUpdating(tokenId);
 
       const response = await fetch(
-        `http://127.0.0.1:8000/tokens/${tokenId}/status?status=Completed`,
+        `https://sih26032-backend-o8kd.onrender.com/tokens/${tokenId}/status?status=Completed`,
         {
           method: "PUT",
         }
@@ -139,7 +139,7 @@ function OfficerDashboard() {
       setUpdating(`${tokenId}-${stage}`);
 
       const response = await fetch(
-        `http://127.0.0.1:8000/procurement-records/${tokenId}/stage?stage=${encodeURIComponent(
+        `https://sih26032-backend-o8kd.onrender.com/procurement-records/${tokenId}/stage?stage=${encodeURIComponent(
           stage
         )}&status=${encodeURIComponent(status)}`,
         {

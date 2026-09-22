@@ -22,7 +22,7 @@ function Login({ onLogin, onRegister }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/farmer-login?mobile=${encodeURIComponent(
+       `https://sih26032-backend-o8kd.onrender.com/farmer-login?mobile=${encodeURIComponent(
           mobile
         )}&password=${encodeURIComponent(password)}`,
         {
